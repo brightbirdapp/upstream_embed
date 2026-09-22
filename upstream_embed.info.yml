@@ -1,0 +1,5 @@
+name: Upstream Embed
+type: module
+description: Embeds an upstream HTTP app in the Drupal theme using shadow DOM (no iframe). Configure the backend URL in settings.php.
+package: Custom
+core_version_requirement: ^10 || ^11

@@ -1,0 +1,9 @@
+stage:
+  css:
+    theme:
+      css/stage.css: {}
+  js:
+    js/shadow.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

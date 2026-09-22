@@ -1,0 +1,31 @@
+upstream_embed.home:
+  # Placeholder path. Edit src/ModuleSettings.php; the route subscriber applies
+  # PUBLIC_PREFIX to this route after Drupal loads the module's routes.
+  path: '/embed'
+  defaults:
+    _controller: '\Drupal\upstream_embed\Controller\EmbedController::page'
+    _title: 'App'
+  methods: [GET, POST, HEAD]
+  requirements:
+    _permission: 'access content'
+
+upstream_embed.item:
+  path: '/embed/{name}'
+  defaults:
+    _controller: '\Drupal\upstream_embed\Controller\EmbedController::page'
+    _title_callback: '\Drupal\upstream_embed\Controller\EmbedController::itemTitle'
+  methods: [GET, POST, HEAD]
+  requirements:
+    _permission: 'access content'
+    name: '[A-Za-z0-9._-]+'
+
+upstream_embed.nested:
+  path: '/embed/{dir}/{file}'
+  defaults:
+    _controller: '\Drupal\upstream_embed\Controller\EmbedController::page'
+    _title_callback: '\Drupal\upstream_embed\Controller\EmbedController::nestedTitle'
+  methods: [GET, POST, HEAD]
+  requirements:
+    _permission: 'access content'
+    dir: '[A-Za-z0-9._-]+'
+    file: '[A-Za-z0-9._-]+'

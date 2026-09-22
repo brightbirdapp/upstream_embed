@@ -1,0 +1,6 @@
+upstream_embed.home:
+  title: Embed
+  description: Upstream app in the Drupal theme (shadow DOM).
+  menu_name: main
+  weight: 26
+  route_name: upstream_embed.home

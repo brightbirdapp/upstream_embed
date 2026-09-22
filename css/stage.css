@@ -1,0 +1,10 @@
+.upstream-embed-page .block-page-title-block {
+  display: none;
+}
+
+.upstream-embed-host {
+  display: block;
+  width: 100%;
+  min-height: 75vh;
+  background: #fff;
+}

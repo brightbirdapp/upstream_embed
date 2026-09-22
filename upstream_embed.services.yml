@@ -1,0 +1,5 @@
+services:
+  upstream_embed.route_subscriber:
+    class: Drupal\upstream_embed\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

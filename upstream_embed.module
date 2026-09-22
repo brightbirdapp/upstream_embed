@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Upstream Embed: hide the theme page title on embed routes.
+ */
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function upstream_embed_preprocess_html(array &$variables): void {
+  $route = \Drupal::routeMatch()->getRouteName();
+  if (is_string($route) && str_starts_with($route, 'upstream_embed.')) {
+    $variables['attributes']['class'][] = 'upstream-embed-page';
+  }
+}
